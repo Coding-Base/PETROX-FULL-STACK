@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'joan-regular', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Joan',Sans-Serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #302AF3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color:#302AF3;
+}
+.logo {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.petro {
+  color:#302AF3; /* Dark Blue */
+  font-family: ' Joan ', sans-serif;
+  font-size: 30px;
+}
+
+.x {
+  color: #F2C464; /* Yellow */
+  font-family: 'Arial Black', sans-serif;
+  margin-left: -10px; /* Adjust spacing */
+  transform: scaleX(0.5); /* Scale X width */
+  font-size: 50px;
+}
+.joan-regular {
+  font-family: 'Joan ', serif;
+  font-weight: 400;
+  font-style: normal;
+}  
+p{
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}

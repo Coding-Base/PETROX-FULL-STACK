@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    max-width: 100%;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding: 80px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.skip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+}
+
+.illustration {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.text h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 14px;
+    color: #555;
+}
+
+.indicator {
+    margin: 15px 0;
+}
+
+.indicator span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.indicator .active {
+    background-color: #ffc107;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #0066ff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #0056d4;
+}
+h2{
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+#image{
+  width: 100%;
+}
+.joan-regular,h2 {
+  font-family: 'Joan ', serif;
+  font-weight: 400;
+  font-style: normal;
+}  
+
+

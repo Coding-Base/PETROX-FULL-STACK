@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Joan', serif; /* Joan for body text */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Styling the logo */
+.header-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-logo img {
+    height: 60px; /* Increase the logo size */
+    margin-bottom: 20px; /* Add space below the logo */
+}
+
+/* Burger icon styles */
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Side Menu Styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden off-screen initially */
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.side-menu.visible {
+    left: 0; /* Slide in when visible */
+}
+
+.side-menu ul {
+    list-style-type: none;
+}
+
+.side-menu ul li {
+    margin-bottom: 20px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.side-menu ul li a:hover {
+    color: #007bff;
+}
+
+/* Heading Styles - Inter font for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif; /* Applying Inter for all headings */
+    margin-bottom: 20px;
+}
+
+/* Content Placeholder */
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+.placeholder {
+    height: 50px;
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer nav ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 24px;
+    color: #333; /* Keeping the default color for icons */
+}
+
+footer nav ul li a i {
+    font-size: 24px;
+    color: #0000FF; /* Change to the previous color for book icon */
+}
+
+/* Hover effect for icons */
+footer nav ul li a:hover i {
+    color: #007bff; /* Light blue on hover */
+}

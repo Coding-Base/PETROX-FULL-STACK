@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="(link unavailable)">
+    <link rel="preconnect" href="(link unavailable)" crossorigin>
+    <link href="(link unavailable)" rel="stylesheet">
+    <link rel="preconnect" href="(link unavailable)">
+    <link rel="preconnect" href="(link unavailable)" crossorigin>
+    <link href="(link unavailable)" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="logo">
+                <image src="Logo.png" class="petro"/>
+            </div><br><br><br>
+            <h2>Create an account</h2>
+            <p>By using our services you are agreeing to our <a href="#">Terms</a> and <a href="#">Privacy Statement</a></p><br><br>
+            <form id="signup-form">
+                <p id="message"></p><br>
+                <input id="name" type="text" placeholder="Full Name" required>
+                <input id="email" type="email" placeholder="Email Address" required>
+                <input id="password" type="password" placeholder="Password" required>
+                <input id="confirm_password" type="password" placeholder="Confirm Password" required><br><br>
+                <button id="button" type="submit">Create account</button>
+            </form><br><br>
+            <p>Already have an account? <a style="text-decoration:none;" href="Login.html">Sign in.</a></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('signup-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+
+            const userData = {
+                name,
+                email,
+                password,
+                confirmPassword
+            };
+
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    document.getElementById('message').innerText = 'Registration Successful';
+                    document.getElementById('message').setAttribute('style', 'color:green;');
+                } else {
+                    document.getElementById('message').innerText = data.error;
+                    document.getElementById('message').setAttribute('style', 'color:red;');
+                }
+            })
+            .catch((error) => console.error('Error:', error));
+        });
+        const button = document.getElementById("button");
+        button.addEventListener("click", validate);
+
+        function validate(e) {
+            const message = document.getElementById("message");
+            const password = document.getElementById("id_password1").value;
+            const confirmPassword = document.getElementById("id_password2").value;
+
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                message.innerText = "Confirm Password must be the same as Password!!!";
+                message.setAttribute("style", "color:red;");
+            }
+        }
+    </script>
+</body>
+</html>

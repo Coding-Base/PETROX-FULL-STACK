@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+       <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+         
+            <div class="logo">
+                <image src="Logo.png" class="petro"/>
+            </div><br><br><br>
+            <h2>Create an account</h2>
+            <p>By using our services you are agreeing to our <a href="#">Terms</a> and <a href="#">Privacy Statement</a></p><br><br>
+            <form id="signup-form">
+                <p id="message"></p><br>
+                <input id="name" type="text" placeholder="User Name" required>
+                <input id="fname" type="text" placeholder="First Name" required>
+                <input id="lname" type="text" placeholder="Last Name" required>
+                <input id="gender" type="text" placeholder="Gender" required>
+                <input id="email" type="email" placeholder="Email Address" required>
+                <input id="password" type="password" placeholder="Password" required>
+                <input id="confirm_password" type="password" placeholder="Confirm Password" required><br><br>
+                <button id="button" type="submit">Create account</button>
+            </form><br><br>
+            <p>Already have an account? <a style="text-decoration:none;" href="Login.html">Login.</a></p>
+        </div>
+    </div>
+    <script>
+      
+      const button = document.getElementById("button");
+button.addEventListener("click", validate);
+
+function validate(e) {
+  e.preventDefault();
+  const message = document.getElementById("message");
+  const password = document.getElementById("password").value;
+  const f_name = document.getElementById("fname").value;
+  const l_name = document.getElementById("lname").value;
+  const gender = document.getElementById("gender").value;
+  const confirm_password = document.getElementById("confirm_password").value;
+  const user = document.getElementById("name").value;
+  const email = document.getElementById("email").value; // Fetch email
+
+  if (password === "" && confirm_password === "" && user === "") {
+    message.innerHTML = "You cannot submit an empty form";
+    message.setAttribute("style", "color:red;");
+  } else if (password !== "" && user !== "" && confirm_password !== "" && confirm_password !== password) {
+    message.innerHTML = "Confirm Password Must be equal to password";
+    message.setAttribute("style", "color:red;");
+  } else if (password !== "" && user !== "" && confirm_password !== "" && confirm_password === password) {
+    const userData = {
+      user,
+      email,
+      password,
+      confirm_password,
+      f_name,
+      l_name,
+      gender
+    };
+
+    fetch('http://127.0.0.1:8000/auth/signup/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userData)
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        document.getElementById('message').innerText = 'Registration Successful';
+        document.getElementById('message').setAttribute('style', 'color:green;');
+        window.location.replace("Login.html")
+      } else {
+        document.getElementById('message').innerText = data.error;
+        document.getElementById('message').setAttribute('style', 'color:red;');
+      }
+    })
+    .catch((error) => {
+      message.innerHTML = "An error occurred during registration";
+      message.setAttribute("style", "color:red;");
+    });
+  }
+}
+        
+    </script>
+
+</body>
+</html>

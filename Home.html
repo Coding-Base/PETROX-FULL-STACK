@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetroX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Joan&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Joan', serif; /* Joan for body text */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Styling the logo */
+        .header-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .header-logo img {
+            height: 50px; /* Increase the logo size */
+            margin-bottom: 20px; /* Add space below the logo */
+        }
+
+        /* Search icon styles */
+        .search-icon {
+            position: absolute;
+            left: 20px; /* Position to the left */
+            cursor: pointer;
+        }
+
+        .search-icon i {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .search-icon:hover i {
+            color: #007bff; /* Change to blue on hover */
+        }
+
+        /* Burger icon styles */
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            position: absolute;
+            right: 20px; /* Position to the right */
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-icon.open span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .menu-icon.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-icon.open span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Side Menu Styles */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden off-screen initially */
+            width: 250px;
+            height: 100%;
+            background-color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: left 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .side-menu.visible {
+            left: 0; /* Slide in when visible */
+        }
+
+        .side-menu ul {
+            list-style-type: none;
+        }
+
+        .side-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .side-menu ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .side-menu ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Heading Styles - Inter font for headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif; /* Applying Inter for all headings */
+            margin-bottom: 20px;
+        }
+
+        /* Content Placeholder */
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .placeholder {
+            height: 50px;
+            background-color: #e0e0e0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        footer nav ul li a {
+            display: block;
+            padding: 10px;
+            font-size: 24px;
+            color: #333; /* Default color for icons */
+        }
+
+        footer nav ul li a i {
+            font-size: 24px;
+            color: #333; /* Default icon color */
+        }
+
+        /* Hover effect for icons */
+        footer nav ul li a:hover i {
+            color: #0000FF; /* Change to blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <p id="display"></p>
+  <div style="display: flex;justify-content: center;" id="big_container"><button style="display: flex;justify-content: space-around;padding: 0.3% ; "   id="logout-button">logout</button><button style="text-decoration: none; padding: 10px; color: #0000FF;border-radius:20px" id="sign"  onclick="signup()">signup</button></div>
+ 
+    <header>
+        <!-- Search Icon -->
+        <div class="search-icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <!-- PetroX Logo --><br><br>
+        <div class="header-logo">
+            <img src="Logo.png" alt="PetroX Logo">
+        </div>
+        <!-- Burger Icon -->
+        <div class="menu-icon" id="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+       
+          
+    </header>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Reservoir Engineering</a></li>
+            <li><a href="#">Drilling Technology</a></li>
+            <li><a href="#">Production</a></li>
+            <li><a href="#">Stimulate Answers</a></li>
+            <li><a href="#">Past Questions</a></li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+    </div>
+ 
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i></a></li> <!-- Home Icon -->
+                <li><a href="#"><i class="fas fa-book-open"></i></a></li> <!-- Open Book Icon -->
+                <li><a href="#"><i class="fas fa-user"></i></a></li> <!-- User Icon -->
+            </ul>
+        </nav>
+    </footer>
+  <script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+        const csrfToken = getCookie('csrftoken');
+    }
+   
+    
+  </script>
+    <script>
+        
+        // Toggle burger menu and side menu visibility
+        document.getElementById('burger-icon').addEventListener('click', function() {
+            this.classList.toggle('open');
+            document.getElementById('side-menu').classList.toggle('visible');
+        });
+   </script>
+   <script>
+   document.addEventListener("DOMContentLoaded", function() {
+    // Fetch user info
+    fetch("http://127.0.0.1:8000/auth/user-info/", {
+        method: "GET",
+        credentials: "include",
+        headers: {
+    'Content-Type': 'application/json',
+    'X-CSRFToken': csrfToken  // include CSRF token if needed
+  }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Display the username on the page if authenticated
+        if (data.username) {
+           const contentDiv = document.querySelector(".content");
+            const userNamePlaceholder = document.createElement("div");
+            userNamePlaceholder.innerHTML = `<h1>Welcome, ${data.username}!</h1>`;
+            contentDiv.prepend(userNamePlaceholder);
+            
+            const signup_button = document.getElementById("logout-button")
+            document.body.appendChild(signup_button);
+            signup_button.setAttribute("style", "position:fixed; top:0;")
+            document.getElementById("sign").remove();
+            const div = document.getElementById("big_container")
+            const profile = document.createElement("button")
+            profile.innerHTML="Profile";
+            div.appendChild(profile)
+            //div.innerHTML=`<button id="profile >Profile</button>`
+            //signup_button.setAttribute("Id","logout-button")
+           
+        } else {
+            console.log("User not authenticated");
+           /* setTimeout(logout_remove,100)
+         function logout_remove(){
+            document.getElementById("logout-button").remove();
+         }*/
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching user info:", error);
+    });
+   })
+    // Add event listener to the logout button
+    document.addEventListener("DOMContentLoaded", () => {
+    // Fetch CSRF token
+    fetch("http://127.0.0.1:8000/auth/csrf/")
+        .then(response => response.json())
+        .then(data => {
+           const csrfToken = data.csrfToken;
+        });
+
+    // Add event listener to logout button
+    document.getElementById("logout-button").addEventListener("click", function() {
+        fetch("http://127.0.0.1:8000/auth/logout/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": csrfToken
+            },
+            credentials: "include"
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+            window.location.replace("Login.html");
+            
+            } else {
+            console.error("Logout failed");
+            }
+        })
+        .catch(error => console.error("Error logging out:", error));
+    });
+});
+</script>
+
+</script>
+<script>
+    const csrfToken = "{{ csrf_token }}";
+  </script>
+  <script>
+    async function fetchUserInfo() {
+      try {
+        const response = await fetch("http://127.0.0.1:8000/auth/user-info/", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrfToken, // Add CSRF token here
+          },
+          credentials: "include", // Include credentials (cookies) with the request
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+  
+        const data = await response.json();
+        console.log("User info:", data);
+        // Display the user info on your page
+        const contentDiv = document.querySelector(".content");
+            const userNamePlaceholder = document.createElement("div");
+                  //const div = document.getElementById("big_container")
+            //div.innerHTML=`<button id="profile >Profile</button>`
+           /* userNamePlaceholder.innerHTML = `<h1>Welcome, ${data.username}!</h1>`;
+            contentDiv.prepend(userNamePlaceholder);
+            const signup_button = document.getElementById("signin-button")
+            signup_button.innerText="logout"
+            signup_button.setAttribute("Id","logout-button")*/
+      } catch (error) {
+        console.error("Error fetching user info:", error);
+        /*const signup_button = document.getElementById("signin-button")
+        signup_button.innerText="signup"
+        signup_button.setAttribute("Id","signin-button")*/
+        setTimeout(logout_remove,100)
+         function logout_remove(){
+            document.getElementById("logout-button").remove();
+         }
+      }
+    }
+  
+    // Call the function on page load or when needed
+    fetchUserInfo();
+
+
+//const signup_button = document.getElementById("signin-button")
+//signup_button.addEventListener("click", user_signup)
+function signup(){
+window.location.replace("signup.html")
+}
+
+    </script>
+
+</body>
+</html>

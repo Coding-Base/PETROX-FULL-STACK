@@ -2,11 +2,11 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 from django.middleware.csrf import get_token
 from django.views.decorators.csrf import csrf_exempt
 import json
-
+from .models import Blog
 @csrf_exempt
 def signup(request):
     if request.method == 'POST':
@@ -80,3 +80,8 @@ def logout_view(request):
         response.delete_cookie('sessionid', path='/')
         return response
     return JsonResponse({"success": False, "error": "Invalid request"}, status=400)
+
+def blog(request):
+    blog = Blog.objects.all()
+    return render(request, 'templates/index.html', {'blog':blog})
+

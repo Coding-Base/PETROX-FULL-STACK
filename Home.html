@@ -1,400 +1,1583 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetroX</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Joan&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>PETROX HOMEPAGE</title>
 
-        body {
-            font-family: 'Joan', serif; /* Joan for body text */
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: space-between;
-            background-color: #f5f5f5;
-        }
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        /* Header styles */
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
 
-        /* Styling the logo */
-        .header-logo {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
 
-        .header-logo img {
-            height: 50px; /* Increase the logo size */
-            margin-bottom: 20px; /* Add space below the logo */
-        }
+TemplateMo 569 Edu Meeting
 
-        /* Search icon styles */
-        .search-icon {
-            position: absolute;
-            left: 20px; /* Position to the left */
-            cursor: pointer;
-        }
+https://templatemo.com/tm-569-edu-meeting
 
-        .search-icon i {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .search-icon:hover i {
-            color: #007bff; /* Change to blue on hover */
-        }
-
-        /* Burger icon styles */
-        .menu-icon {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 24px;
-            width: 30px;
-            position: absolute;
-            right: 20px; /* Position to the right */
-        }
-
-        .menu-icon span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-color: #333;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        .menu-icon.open span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-
-        .menu-icon.open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-icon.open span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
-        /* Side Menu Styles */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -250px; /* Hidden off-screen initially */
-            width: 250px;
-            height: 100%;
-            background-color: white;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            transition: left 0.3s ease;
-            z-index: 1000;
-            padding: 20px;
-        }
-
-        .side-menu.visible {
-            left: 0; /* Slide in when visible */
-        }
-
-        .side-menu ul {
-            list-style-type: none;
-        }
-
-        .side-menu ul li {
-            margin-bottom: 20px;
-        }
-
-        .side-menu ul li a {
-            text-decoration: none;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .side-menu ul li a:hover {
-            color: #007bff;
-        }
-
-        /* Heading Styles - Inter font for headings */
-        h1, h2, h3, h4, h5, h6 {
+-->
+  </head>
+<style>
+   h1, h2, h3, h4, h5, h6,p {
             font-family: 'Inter', sans-serif; /* Applying Inter for all headings */
             margin-bottom: 20px;
         }
 
-        /* Content Placeholder */
-        .content {
+</style>
+<div id="user_profile_container">
+<div id="user-profile">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border-bottom: 2px solid #f1f1f1;
+            padding: 10px 20px;
+        }
+
+        .logo h1 {
+            color: #0078bc;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info span {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .user-icon img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #f9b233;
+            padding: 10px 20px;
+        }
+
+        .navbar .btn {
+            margin-right: 15px;
+            background-color: #0078bc;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .navbar .btn:hover {
+            background-color: #005f99;
+        }
+
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .navbar .search-bar input {
+            padding: 7px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .navbar .search-bar button {
+            background-color: #0078bc;
+            color: #fff;
+            padding: 7px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
             padding: 20px;
+        }
+
+        .user-details, .miscellaneous {
             flex: 1;
+            margin: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eee;
         }
 
-        .placeholder {
-            height: 50px;
-            background-color: #e0e0e0;
-            margin-bottom: 20px;
-            border-radius: 8px;
+        .user-details h2, .miscellaneous h2 {
+            font-size: 18px;
+            color: #444;
+            border-bottom: 2px solid #f9b233;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: white;
-            padding: 10px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        .user-details p, .miscellaneous ul li {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
         }
 
-        footer nav ul {
+        .user-details button {
+            background-color: #0078bc;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .user-details button:hover {
+            background-color: #005f99;
+        }
+
+        .miscellaneous ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .miscellaneous ul li a {
+            text-decoration: none;
+            color: #0078bc;
+        }
+
+        .miscellaneous ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
             display: flex;
             justify-content: space-around;
-            list-style: none;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
         }
 
-        footer nav ul li a {
-            display: block;
-            padding: 10px;
-            font-size: 24px;
-            color: #333; /* Default color for icons */
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+        }
+ .hidden{
+  display:none;
+ }
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #f9b233;
         }
 
-        footer nav ul li a i {
-            font-size: 24px;
-            color: #333; /* Default icon color */
-        }
-
-        /* Hover effect for icons */
-        footer nav ul li a:hover i {
-            color: #0000FF; /* Change to blue on hover */
+        .footer-section p {
+            font-size: 14px;
+            color: #ddd;
         }
     </style>
 </head>
 <body>
-    <p id="display"></p>
-  <div style="display: flex;justify-content: center;" id="big_container"><button style="display: flex;justify-content: space-around;padding: 0.3% ; "   id="logout-button">logout</button><button style="text-decoration: none; padding: 10px; color: #0000FF;border-radius:20px" id="sign"  onclick="signup()">signup</button></div>
- 
-    <header>
-        <!-- Search Icon -->
-        <div class="search-icon">
-            <i class="fas fa-search"></i>
+  <style>
+  .hidden{
+display: none;
+    }
+  </style>
+    <header class="header">
+        <div class="logo">
+            <img src="Logo.png"/>
         </div>
-        <!-- PetroX Logo --><br><br>
-        <div class="header-logo">
-            <img src="Logo.png" alt="PetroX Logo">
+        <div class="user-info">
+            <b id="name"></b>
+            <div class="user-icon">
+                <img id="userImage" src="user.png" alt="User Avatar">
+            </div>
         </div>
-        <!-- Burger Icon -->
-        <div class="menu-icon" id="burger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-       
-          
     </header>
-
-    <!-- Side Menu -->
-    <div class="side-menu" id="side-menu">
-        <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Reservoir Engineering</a></li>
-            <li><a href="#">Drilling Technology</a></li>
-            <li><a href="#">Production</a></li>
-            <li><a href="#">Stimulate Answers</a></li>
-            <li><a href="#">Past Questions</a></li>
-        </ul>
-    </div>
-
-    <!-- Content -->
-    <div class="content">
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-    </div>
- 
-    <!-- Footer -->
-    <footer>
-        <nav>
+    <nav class="navbar">
+        <button class="btn">Learning Portal</button>
+        <button class="btn">Dashboard</button>
+        <button class="btn">My Courses</button>
+        <form class="search-bar" onsubmit="searchCourses(event)">
+            <input type="text" id="searchInput" placeholder="Search courses">
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    <main class="main-content">
+        <section class="user-details">
+            <h2>User Details</h2>
+            <p id="email"><strong>Email:</strong></p>
+            <p><strong>Country:</strong> Nigeria</p>
+            <p id="first"><strong></strong> </p>
+            <p id="last"><strong></strong> </p>
+            <p><strong>Department:</strong> Petroleum Engineering</p>
+            <p><strong>Registration Number:</strong> 20211726493</p>
+            <button onclick="uploadImage()">Upload Picture</button>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+        </section>
+        <section class="miscellaneous">
+            <h2>Miscellaneous</h2>
             <ul>
-                <li><a href="#"><i class="fas fa-home"></i></a></li> <!-- Home Icon -->
-                <li><a href="#"><i class="fas fa-book-open"></i></a></li> <!-- Open Book Icon -->
-                <li><a href="#"><i class="fas fa-user"></i></a></li> <!-- User Icon -->
+                <li><a href="#">Full Profile</a></li>
+                <li><a href="#">My Certificates</a></li>
+                <li><a href="#">Forum Posts</a></li>
+                <li><a href="#">Learning Plans</a></li>
             </ul>
-        </nav>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Calendar</h3>
+            <p>November 2024</p>
+        </div>
+        <div class="footer-section">
+            <h3>About PETROX</h3>
+            <p>PETROX holds online undergraduate, postgraduate, and industry courses...</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>You can find us here.</p>
+        </div>
     </footer>
-  <script>
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim();
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-        const csrfToken = getCookie('csrftoken');
-    }
-   
-    
-  </script>
     <script>
-        
-        // Toggle burger menu and side menu visibility
-        document.getElementById('burger-icon').addEventListener('click', function() {
-            this.classList.toggle('open');
-            document.getElementById('side-menu').classList.toggle('visible');
-        });
-   </script>
-   <script>
-   document.addEventListener("DOMContentLoaded", function() {
-    // Fetch user info
-    fetch("http://127.0.0.1:8000/auth/user-info/", {
-        method: "GET",
-        credentials: "include",
-        headers: {
-    'Content-Type': 'application/json',
-    'X-CSRFToken': csrfToken  // include CSRF token if needed
-  }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Display the username on the page if authenticated
-        if (data.username) {
-           const contentDiv = document.querySelector(".content");
-            const userNamePlaceholder = document.createElement("div");
-            userNamePlaceholder.innerHTML = `<h1>Welcome, ${data.username}!</h1>`;
-            contentDiv.prepend(userNamePlaceholder);
+        function searchCourses(event) {
+            event.preventDefault();
+            const searchQuery = document.getElementById('searchInput').value;
             
-            const signup_button = document.getElementById("logout-button")
-            document.body.appendChild(signup_button);
-            signup_button.setAttribute("style", "position:fixed; top:0;")
-            document.getElementById("sign").remove();
-            const div = document.getElementById("big_container")
-            const profile = document.createElement("button")
-            profile.innerHTML="Profile";
-            div.appendChild(profile)
-            //div.innerHTML=`<button id="profile >Profile</button>`
-            //signup_button.setAttribute("Id","logout-button")
+        }
+
+        function uploadImage() {
+            document.getElementById('fileInput').click();
+        }
+
+        function previewImage(event) {
+            const userImage = document.getElementById('userImage');
+            userImage.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
+</div>
+</div>
+<body >
+  
+  <div id="drilling"></div>
+  <div id="course"></div>
+  <div id="reservior"></div>
+  <div id="production"></div>
+<section id="Home_big_container">
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+         
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="/Logo.png">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li ><a   onclick="drilling_field()" class="active">Drilling </a></li>
+                          <li><a  id="production" onclick="production_field()" >Production</a></li>
+                          <li ><a id="reservoir" onclick="reservior_field()" >Reservoir</a></li>
+                          <div style="display: flex;justify-content: center; " id="big_container"> 
+                            <li style="margin: -10px;"><a style="text-decoration: none; margin: 0;text-decoration: none; display: none; " class="hidden"  id="logout-button" >logout</a></li> 
+                           <li><a style="text-decoration: none; display: none;  margin: 0; color: white; " class="hidden" id="profile_btn" style="display: none;" onclick="PROFILE()" >Profile</a></li>     
+                            <a style="text-decoration: none;   margin: 0; border-radius:20px; color: lightseagreen;"  href="signup.html" id="sign" >signup</a>  
+                    </div>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Stimulate</a>
+                              
+               
+                              <ul class="sub-menu">
+                                  <li><a id="prompt_answer" >Prompt Answers To Question</a></li>
+                                  <li><a id="past_question" >Past Questions</a></li>
+                              </ul>
+                          </li>
+                          <li class="scroll-to-section"><a id="course" >Courses</a></li> 
+                          <li class="scroll-to-section"><a id="contact">Contact Us</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/PET VIDEO.mp4" type="video/mp4" />
+      </video>
+      
+      <div class="video-overlay header-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="caption">
+                  <p id="text"></p>
+              
+                <h2>Welcome to Petrox</h2> <a rel="nofollow" href="https://www.pexels.com/@pressmaster" target="_blank">Learn more about Petroleum Engineering and its opportunities in the oil sector.</a></p>
+              <div class="main-button-red">
+                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+          </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+          
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-01.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Past Questions</h4>
+                <p style="color: black;">Have access to a wide range of past questions and prepare yourself for any exam or test.</p>
+              </div>
+              <script src="petrox.js"></script>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-01.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Past Questions</h4>
+                <p style="color: black;">Have access to a wide range of past questions and prepare yourself for any exam or test.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="/pic2.jpg" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Access to Formulas</h4>
+                <p style="color: black;">The  Petroleum sector has a lot of calculation from exploring possible reservoir to the commencement of drilling activites, thus this website provides you access to a wide range of this formula</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-01.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Past Questions</h4>
+                <p style="color: black;">Have access to a wide range of past questions and prepare yourself for any exam or test.</p>
+              </div>
+            </div>
+             
+            <div class="item">
+              <div class="icon">
+                <img src="/pic.jpg" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Detailed Concept Defination</h4>
+                <p style="color: black;">We provide a well detailed explanation to various petroleum intricate concepts and topics</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Online Test </h4>
+                <p style="color: black;">You can test yourself with our online platform to know if you are ready for that test or exam</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="/PIC4.jpg" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Networking</h4>
+                <p style="color: black;">Get to meet other pontential petroleum engineers online and interract with them real time.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming-meetings" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Upcoming Meetings</h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="categories">
+            <h4>Meeting Catgories</h4>
+            <ul>
+              <li><a href="#">Coming soon</a></li>
+              <li><a href="#">Coming soons</a></li>
+              <li><a href="#">Coming soon</a></li>
+              <li><a href="#">Coming soon</a></li>
+              <li><a href="#">Coming soon</a></li>
+            </ul>
+            <div class="main-button-red">
+              <a href="meetings.html">All Upcoming Meetings</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div  class="row">
+            <div class="col-lg-6">
+            <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                    <span>$0.00</span>
+                  </div>
+                  <a href="meeting-details.html"><img src="/PIC4.jpg" alt="New Lecturer Meeting"></a>
+                </div>
+                <div class="down-content">
+                  <div class="date">
+                    <h6>Nov <spSuspendissan>10</span></h6>
+                  </div>
+                  <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
+                  <p>coming soon<br>stay tuned</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                    <span></span>
+                  </div>
+                  <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt="Online Teaching"></a>
+                </div>
+                <div class="down-content">
+                  <div class="date">
+                    <h6>Nov <span>24</span></h6>
+                  </div>
+                  <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
+                  <p>Learn and unlearned<br></p>
+                </div>
+              </div>
+            </div>
+                      <div class="col-lg-6">
+             
+            </div>
            
-        } else {
-            console.log("User not authenticated");
-           /* setTimeout(logout_remove,100)
-         function logout_remove(){
-            document.getElementById("logout-button").remove();
-         }*/
-        }
-    })
-    .catch(error => {
-        console.error("Error fetching user info:", error);
-    });
-   })
-    // Add event listener to the logout button
-    document.addEventListener("DOMContentLoaded", () => {
-    // Fetch CSRF token
-    fetch("http://127.0.0.1:8000/auth/csrf/")
-        .then(response => response.json())
-        .then(data => {
-           const csrfToken = data.csrfToken;
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply-now" id="apply">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="row">
+            <div class="meeting-item">
+              <div class="thumb">
+                <div class="price">
+                  <span>$14.00</span>
+                </div>
+                <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt="Higher Education"></a>
+              </div>
+              <div class="down-content">
+                <div class="date">
+                  <h6>Nov <span>26</span></h6>
+                </div>
+                <a href="meeting-details.html">Soon<br></p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>APPLY FOR MATERIALS AND PDFS</h3>
+                <p style="color: black;">You are free to access a wide range of information and material and also download pdfs to improve your learning</p>
+                <div class="main-button-red">
+                 
+                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="main-button-yellow">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>$14.00</span>
+                    </div>
+                    <a href="meeting-details.html"><img src="/pic3.jpg" alt="Higher Education"></a>
+                  </div>
+                  <div class="down-content">
+                    <div class="date">
+                      <h6>Nov <span>26</span></h6>
+                    </div>
+                    <a href="meeting-details.html">Soon<br></p>
+                  </div>
+                </div>
+                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+              <div class="item">
+                <h3>FREE REGISTRATION IS FREE</h3>
+                <p style="color: black;"> No cause for alerm registration is free, you dont have to pay a dim.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="accordions is-first-expanded">
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>About PETROX</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+               
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span></span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p> Have access to Petroleum Engineering courses and Materialsbr
+                          Study more with solved examples and Explained parameters
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>Please tell your friends</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>SPREAD THE NEWS.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion last-accordion">
+                <div class="accordion-head">
+                    <span>DISCUSSIONS</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Petroleum engineering is a very interesting field, there are a lot of concepts we need  to discuss. some of this calculation include annular capacity, drill pipe capacity, weight on bit, bottoms up, eqvalent circulating density e.t.c </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
         });
 
-    // Add event listener to logout button
-    document.getElementById("logout-button").addEventListener("click", function() {
-        fetch("http://127.0.0.1:8000/auth/logout/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRFToken": csrfToken
-            },
-            credentials: "include"
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-            window.location.replace("Login.html");
-            
-            } else {
-            console.error("Logout failed");
-            }
-        })
-        .catch(error => console.error("Error logging out:", error));
-    });
-});
-</script>
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+    </body>
+  <section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Our Popular Courses</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-courses-item owl-carousel">
+            <div class="item">
+              <img src="/PIC7.jpg" alt="Course One">
+              <div class="down-content">
+                <h4>OIL AND GAS</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="/pic.jpg" alt="Course Two">
+              <div class="down-content">
+                <h4>RESERVIOR ENGINEERING</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="/pic2.jpg" alt="">
+              <div class="down-content">
+                <h4>DRILLING TECHNOLOGY</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$140</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/images/course-04.jpg" alt="">
+              <div class="down-content">
+                <h4>PETROLEUM GEOLOGY</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$20</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/images/course-01.jpg" alt="">
+              <div class="down-content">
+                <h4>PRODUCTION</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$250</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="/pic3.jpg"alt="">
+              <div class="down-content">
+                <h4>FLUID TECHNOLOGY</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$270</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/images/course-03.jpg" alt="">
+              <div class="down-content">
+                <h4>Web Design </h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$340</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/images/course-04.jpg" alt="">
+              <div class="down-content">
+                <h4>Please visit our website again</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$360</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="/PIC5.jpg" alt="">
+              <div class="down-content">
+                <h4>HEAT AND MASS</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$400</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/images/course-02.jpg" alt="">
+              <div class="down-content">
+                <h4>PETROCHEMICAL</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$430</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="/PIC7.jpg" alt="">
+              <div class="down-content">
+                <h4>PROGRAMMING</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$480</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="assets/images/course-04.jpg" alt="">
+              <div class="down-content">
+                <h4>PYTHON</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>$560</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="heading-page header-text" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>A BRIEF EXPLANATION ON DRILLING FLUID TECHNOLOGY</h6>
+          <h2></h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</script>
-<script>
-    const csrfToken = "{{ csrf_token }}";
+  <section class="meetings-page" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="filters">
+                <ul>
+                  <li data-filter="*"  class="active">Get started</li>
+                  <li data-filter=".soon">Full Explanation</li>
+                  <li data-filter=".imp">Brief Review</li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="row grid">
+                <div class="col-lg-4 templatemo-item-col all soon">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="/pic2.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>12</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>FLUID PROPERTIES</h4></a>
+                      <p>Fluid property are very important in drilling fliud technology, the overall performance of the drilling operation is dependent on how well this properties are formulated.</p><br><a onclick="learn()">Learn More</a><br><p id="learn"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all imp">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="/pic3.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>14</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>RHEOLOGICAL PROPERTIES</h4></a>
+                      <p>This properties describe the relationship between the flow rate (shear rate) and the pressure (shear stress)<br> <a onclick="rheology()">Learn More</a></p><p id="rheology"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all soon">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="/PIC7.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>16</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>FILTRATION PROPERTIES</h4></a>
+                      <p> Filtration occurs anytime a permeable formation is exposesd to a mud at a pressure higher than the formation pressure.<br><a onclick="filtrate()">Learn More</a></p><p id="filtrates"></p></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all att">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="/PIC5.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>18</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4> MATERIAL BALANCE EQUATION</h4></a>
+                      <p>The concept of material is of utter most importance in drilling technology.<br>A proper knowledge  of how to use and perform basic calculations on it will enable the drilling engineerer to optimize and minimize cost but stil maximize quality and efficency <a onclick="MBE()">Learn More</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all att">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="/pic3.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>22</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>OUR VISION HERE IN PETROX</h4></a>
+                      <p>Provide all the support and help you need to propser in the field of petroleum Engineering<br><a onclick="vision()">Learn More</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all imp">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>24</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>THE PLACE OF PROGRAMMING IN PETROLEUM ENGINEERING
+                      </h4></a>
+                      <p>The world is powered by technology and as time goes by man seek for a more easy and optimize way of doing things rather than the ancient conventional way that has always been used over the decades<br><a onclick="programming()">Learn More</a>.</p>
+                    </div>
+                  </div>
+                </div>
+            
+                      
+                  
+               
+                <div class="col-lg-4 templatemo-item-col all att soon">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+                        <span></span>
+                      </div>
+                      <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Nov <span>30</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Have You Heard About SPE!!!</h4></a>
+                      <p>The society of petroleum engineerers is a platform that brings all petroleum enginnerers all over the world together.<br>The exciting part about is that you do not have to be a petroleum engineerer before you can become part of this great family<a onclick="vision()">Learn More</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="pagination">
+                <ul>
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+     
+     
+    </div>
+  </section>
+  <section class="our-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>FEW </h2>
+            </div>FACTS ABOUT PETROX
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content percentage">
+                    <div class="count-digit">94</div>
+                    <div class="count-title">LAUCHED</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">126</div>
+                    <div class="count-title">Current Teachers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content new-students">
+                    <div class="count-digit">2345</div>
+                    <div class="count-title">New Students</div>
+                  </div>
+                </div> 
+               
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="col-lg-6 align-self-center">
+          <div class="video">
+            <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="assets/images/play-icon.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Let's get in touch</h2>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
+                  </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+        
+        </div>
+      </div>
+        <div class="col-lg-3">
+          <div class="right-info">
+            <ul>
+              <li>
+                <h6>Phone Number</h6>
+                <span>07049946769</span>
+              </li>
+              <li>
+                <h6>Email Address</h6>
+                <span>OSIMIGODSGIFT@gmail.COM</span>
+              </li>
+              <li>
+                <h6>Street Address</h6>
+                <span>EZIOBODO OWERRI WEST</span>
+              </li>
+              <li>
+               
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2024 Petrox Co, Ltd. All Rights Reserved. 
+        
+    </div>
+  </section>
+</section>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+    <script>
+      function getCookie(name) {
+          let cookieValue = null;
+          if (document.cookie && document.cookie !== '') {
+              const cookies = document.cookie.split(';');
+              for (let i = 0; i < cookies.length; i++) {
+                  const cookie = cookies[i].trim();
+                  if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                      cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                      break;
+                  }
+              }
+          }
+          return cookieValue;
+          const csrfToken = getCookie('csrftoken');
+      }
+     
+      
+    </script>
+      <script>
+          
+          // Toggle burger menu and side menu visibility
+          document.getElementById('burger-icon').addEventListener('click', function() {
+              this.classList.toggle('open');
+              document.getElementById('side-menu').classList.toggle('visible');
+          });
+     </script>
+     <script>
+     document.addEventListener("DOMContentLoaded", function() {
+      // Fetch user info
+      fetch("http://127.0.0.1:8000/auth/user-info/", {
+          method: "GET",
+          credentials: "include",
+          headers: {
+      'Content-Type': 'application/json',
+      'X-CSRFToken': csrfToken  // include CSRF token if needed
+    }
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("Network response was not ok");
+          }
+          return response.json();
+      })
+      .then(data => {
+          // Display the username on the page if authenticated
+          if (data.username) {
+              
+              const div = document.getElementById("big_container")
+              const contentDiv = document.querySelector(".content");
+              const userNamePlaceholder = document.createElement("div");
+              const signup = document.getElementById("sign")
+              signup.classList.add("hidden")
+              const userprofile = document.getElementById("profile_btn");
+              userprofile.classList.remove("hidden")
+              //userNamePlaceholder.innerHTML =`<h1>Welcome, ${data.username}!</h1>`
+              document.getElementById("text").innerHTML =`<h1>Welcome, ${data.username}!</h1>`
+              //contentDiv.prepend(userNamePlaceholder);
+              document.getElementById("name").innerHTML =` ${data.username}!`
+              document.getElementById("email").innerHTML =`<b>Email: ${data.email} </b>`
+              document.getElementById("first").innerHTML =`<b>First Name: ${data.first_name}</b>`
+              document.getElementById("last").innerHTML =`<b>Last Name: ${data.last_name}</b>`
+              const logout_button = document.getElementById("logout-button")
+              logout_button.classList.remove("hidden")
+              const profile_btn = document.getElementById("profile_btn")
+              profile_btn.setAttribute("style","display:true;")
+              const profile = document.createElement("a")
+              profile.innerHTML="Profile"
+              const  profile_div = document.getElementById("user-profile")
+              profile_div.classList.add("hidden");
+              //document.getElementById("logout").innerHTML="Login"
+              
+              //profile.setAttribute("style","color:black; margin:10px;")
+              //profile.setAttribute("Id", "profile-btn")
+              //profile.addEventListener("click", PROFILE)
+              logout_button.setAttribute("style", "position:relative;margin:10px;color:white;")
+              
+              const user_name = document.createElement("p")
+              user_name.innerText= `<h1>Welcome, ${data.username}!</h1>`
+              const span = document.getElementById("name")
+              span.innerHTML=` ${data.username}`
+              //div.innerHTML=`<button id="profile >Profile</button>`
+              //signup_button.setAttribute("Id","logout-button")
+             
+          } else {
+              console.log("User not authenticated");
+              setTimeout(logout_remove,100)
+              function logout_remove(){
+              const signup = document.getElementById("sign")
+              signup.classList.remove("hidden") 
+              const logout_button = document.getElementById("logout-button") 
+              const profile = document.getElementById("profile_btn")
+              logout_button.remove()
+              profile.remove()
+              signup.addEventListener("click", signup)
+         }
+              
+             /* setTimeout(logout_remove,100)
+           function logout_remove(){
+              document.getElementById("logout-button").remove();
+           }*/
+           
+        
+          }
+      })
+      .catch(error => {
+          console.error("Error fetching user info:", error);
+         
+      });
+     })
+      // Add event listener to the logout button
+      document.addEventListener("DOMContentLoaded", () => {
+      // Fetch CSRF token
+      fetch("http://127.0.0.1:8000/auth/csrf/")
+          .then(response => response.json())
+          .then(data => {
+             const csrfToken = data.csrfToken;
+          });
+  
+      // Add event listener to logout button
+      document.getElementById("logout-button").addEventListener("click", function() {
+          fetch("http://127.0.0.1:8000/auth/logout/", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+                  "X-CSRFToken": csrfToken
+              },
+              credentials: "include"
+          })
+          .then(response => response.json())
+          .then(data => {
+              if (data.success) {
+              window.location.replace("Login.html");
+              
+              } else {
+              console.error("Logout failed");
+              }
+          })
+          .catch(error => console.error("Error logging out:", error));
+      });
+  });
+  </script>
+  
   </script>
   <script>
-    async function fetchUserInfo() {
-      try {
-        const response = await fetch("http://127.0.0.1:8000/auth/user-info/", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": csrfToken, // Add CSRF token here
-          },
-          credentials: "include", // Include credentials (cookies) with the request
-        });
-  
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-  
-        const data = await response.json();
-        console.log("User info:", data);
-        // Display the user info on your page
-        const contentDiv = document.querySelector(".content");
-            const userNamePlaceholder = document.createElement("div");
-                  //const div = document.getElementById("big_container")
-            //div.innerHTML=`<button id="profile >Profile</button>`
-           /* userNamePlaceholder.innerHTML = `<h1>Welcome, ${data.username}!</h1>`;
-            contentDiv.prepend(userNamePlaceholder);
-            const signup_button = document.getElementById("signin-button")
-            signup_button.innerText="logout"
-            signup_button.setAttribute("Id","logout-button")*/
-      } catch (error) {
-        console.error("Error fetching user info:", error);
-        /*const signup_button = document.getElementById("signin-button")
-        signup_button.innerText="signup"
-        signup_button.setAttribute("Id","signin-button")*/
-        setTimeout(logout_remove,100)
-         function logout_remove(){
-            document.getElementById("logout-button").remove();
-         }
-      }
-    }
-  
-    // Call the function on page load or when needed
-    fetchUserInfo();
-
-
-//const signup_button = document.getElementById("signin-button")
-//signup_button.addEventListener("click", user_signup)
-function signup(){
-window.location.replace("signup.html")
-}
-
+      const csrfToken = "{{ csrf_token }}";
     </script>
+    <script>
+      async function fetchUserInfo() {
+        try {
+          const response = await fetch("http://127.0.0.1:8000/auth/user-info/", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": csrfToken, // Add CSRF token here
+            },
+            credentials: "include", // Include credentials (cookies) with the request
+          });
+    
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+            const signup = document.getElementById("sign")
+              signup.classList.remove("hidden") 
+              const logout_button = document.getElementById("logout-button") 
+              const profile = document.getElementById("profile_btn")
+              logout_button.classList.add("hidden")
+              profile.classList.add("hidden")
+              signup.addEventListener("click", signup)
+          }
+    
+          const data = await response.json();
+          console.log("User info:", data);
+         
+          // Display the user info on your page
+          const contentDiv = document.querySelector(".content");
+              const userNamePlaceholder = document.createElement("div");
+                    //const div = document.getElementById("big_container")
+              //div.innerHTML=`<button id="profile >Profile</button>`
+             /* userNamePlaceholder.innerHTML = `<h1>Welcome, ${data.username}!</h1>`;
+              contentDiv.prepend(userNamePlaceholder);
+              const signup_button = document.getElementById("signin-button")
+              signup_button.innerText="logout"
+              signup_button.setAttribute("Id","logout-button")*/
+             
+             
+            
+        } catch (error) {  
+          console.error("Error fetching user info:", error);
+          setTimeout(logout_remove,100)
+         function logout_remove(){
+            //document.getElementById("logout-button").remove();
+            const signup = document.getElementById("sign")
+              signup.classList.remove("hidden") 
+              const logout_button = document.getElementById("logout-button") 
+              const profile = document.getElementById("profile_btn")
+              logout_button.remove()
+              profile.remove()
+              signup.addEventListener("click", signup)
+         }
+          /*const signup_button = document.getElementById("signin-button")
+          signup_button.innerText="signup"
+          signup_button.setAttribute("Id","signin-button")*/
+          //setTimeout(logout_remove,100)
+         
+         
+        /* function logout_remove(){
+          document.getElementById("logout-button").remove();
+          const div= document.getElementById("big_container")
+          const signup = document.getElementById("sign")
+          div.appendChild(signup)
+           
+           }*/
+        
+        }
+      }
+    
+      // Call the function on page load or when needed
+      fetchUserInfo();
+  
+  
+  //const signup_button = document.getElementById("signin-button")
+  //signup_button.addEventListener("click", user_signup)
+
+  
+      </script>
+      <script src="petrox.js"></script>
+</body>
 
 </body>
 </html>

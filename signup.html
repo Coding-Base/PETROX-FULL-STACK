@@ -12,6 +12,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+<style>
+  /* General input styling */
+  input[type="text"], input[type="password"] {
+      width: 100%; /* Make inputs take full width of the container */
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; /* Ensures consistent sizing including padding */
+  }
+
+  /* Password container for toggle button */
+  .password-container {
+      position: relative;
+      width: 100%; /* Ensure consistency with other input fields */
+  }
+
+  #password {
+      padding-right: 40px; /* Space for the toggle icon */
+  }
+
+  /* Toggle button styling */
+  #toggleConfirmPassword{
+    position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+  }
+  #togglePassword {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+  }
+
+  #togglePassword img  {
+      width: 20px;
+      height: 20px;
+  }
+  #toggleConfirmPassword img{
+    width: 20px;
+     height: 20px;
+  }
+  </style>
 <body>
     <div class="container">
         <div class="form-box">
@@ -28,8 +75,19 @@
                 <input id="lname" type="text" placeholder="Last Name" required>
                 <input id="gender" type="text" placeholder="Gender" required>
                 <input id="email" type="email" placeholder="Email Address" required>
-                <input id="password" type="password" placeholder="Password" required>
-                <input id="confirm_password" type="password" placeholder="Confirm Password" required><br><br>
+                <div class="password-container">
+                  <input type="password" name="password" placeholder="Password" id="password" required>
+                  <span id="togglePassword">
+                      <img id="eyeIcon" src="close.png" alt="Toggle Password">
+                  </span>
+              </div>
+              <div class="password-container">
+                <input type="password" name="password" placeholder="Confirm Password" id="confirm_password" required>
+                <span id="toggleConfirmPassword">
+                    <img id="confirmeyeIcon" src="close.png" alt="Toggle Password">
+                </span>
+            </div>
+                <br><br>
                 <button id="button" type="submit">Create account</button>
             </form><br><br>
             <p>Already have an account? <a style="text-decoration:none;" href="Login.html">Login.</a></p>
@@ -92,6 +150,35 @@ function validate(e) {
     });
   }
 }
+const togglePassword = document.getElementById("togglePassword");
+        const passwordInput = document.getElementById("password");
+        //const confirmpasswordInput = document.getElementById("confirm_password");
+        const eyeIcon = document.getElementById("eyeIcon");
+
+        togglePassword.addEventListener("click", () => {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                
+                eyeIcon.src = "open.png"; // Replace with your open-eye icon
+            } else {
+                passwordInput.type = "password";
+                
+                eyeIcon.src = "close.png"; // Replace with your closed-eye icon
+            }
+        });
+   const toggleConfirmPassword = document.getElementById("toggleConfirmPassword")
+        toggleConfirmPassword.addEventListener("click", () =>{
+          const confirmpasswordInput = document.getElementById("confirm_password");
+          const confirmeyeIcon = document.getElementById("confirmeyeIcon")
+          if (confirmpasswordInput.type === "password") {
+                confirmpasswordInput.type="text"
+                confirmeyeIcon.src = "open.png"; // Replace with your open-eye icon
+            } else {
+                confirmpasswordInput.type="password"
+                confirmeyeIcon.src = "close.png"; // Replace with your closed-eye icon
+            }
+        })
+
         
     </script>
 

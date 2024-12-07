@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petroleum Engineering</title>
+    <link rel="stylesheet" href="onboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+
+    <div class="container">
+        <div class="skip"><button id="button" style="border:none;color:black;background:white;">Skip</button></div>
+        <div class="content">
+            <img id="image" src="final1.png" alt="Illustration" class="illustration">
+            <div class="text">
+                <h2 id="h2">Actualize Goals</h2>
+                <p id="p">Learn more about Petroleum Engineering and its opportunities in the oil sector.</p>
+            </div>
+            <div class="indicator">
+                <span id="active"class="active"></span>
+                <span id="inactive1"class="inactive1"></span>
+                <span id="inactive2" class="inactive2"></span>
+            </div>
+        </div>
+        <a href="signup.html"><button  class="login-btn">Login</button></a>
+    </div>
+    
+    <script>
+    const image = document.getElementById("image");
+    const p = document.getElementById("p");
+    const h2 = document.getElementById("h2");
+    const button = document.getElementById("button");
+    const inactive1 = document.getElementById("inactive1");
+    const active = document.getElementById("active");
+    const inactive2 = document.getElementById("inactive2");
+
+    let slideIndex = 0;
+    let startX, endx;
+
+    document.getElementById("touchstart", (e)=>{
+      startx= e.touches[0].clientX;
+    });
+
+    document.addEventListener("touchend", (e)=>{
+      endX =e.changedTouches[0].clientX;
+      handleSwipe();
+    })
+
+    function handleSwipe(){
+      const swipeDistance = endX - startX;
+      if( swipeDistance > 50 && slideIndex > 0){
+        //swipe right
+        slideIndex--;
+        slideChange();
+      }else if( swipeDistance < -50 && slideIndex <2){
+        // swipe left
+        slideIndex++;
+        slideChange();
+
+      }
+    }
+    function slideChange(){
+      switch(slideIndex){
+        case 0:
+          image.src = "final1.png";
+          active.classList.remove("inactive");
+          active.classList.add("active");
+          inactive1.classList.remove("active");
+          inactive1.classList.add("inactive");
+          inactive2.classList.remove("active");
+          inactive2.classList.add("inactive");
+          h2.innerText="Actualize Goals" ;
+          p.innerText="learn more about Petroleum Engineering and its opportunities in the oil sector"        
+          button.textContent ="Next"
+          break;
+
+    case 1:
+          image.src="final3.png"
+         inactive1.classList.remove("inactive");
+          inactive1.classList.add("active");
+          active1.classList.remove("active");
+          active1.classList.add("inactive");
+          h2.innerText="study Better" ;
+          p.innerText="Have access to Petroleum Engineering courses and Materials"
+          break;
+  case 2:
+          image.src="Image2.jpg";  
+          inactive2.classList.remove("inactive");
+          inactive2.classList.add("active");
+          active1.classList.remove("active");
+          active1.classList.add("inactive");
+          h2.innerText="Learn Better" ;
+          p.innerText="Study more with solved examples and Explained parameters"
+          button.textContent="Finish"
+          break;
+      }
+    }
+    </script>
+</body>
+</html>

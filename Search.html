@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container .search-icon {
+      padding: 10px;
+      background-color: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-container .search-icon img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .search-container input {
+      border: none;
+      outline: none;
+      padding: 10px;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      background: none;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-container button img {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .search-container button:focus,
+    .search-container input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <div class="search-icon">
+      <img src="./search_24dp_BLACK_FILL0_wght400_GRAD0_opsz24.png" alt="Search">
+    </div>
+    <input type="password" id="searchInput" placeholder="Search...">
+    <button id="visibilityButton">
+      <img src="./visibility_off_24dp_BLACK_FILL0_wght400_GRAD0_opsz24.png" alt="Hidden" id="visibilityIcon">
+    </button>
+  </div>
+
+  <script>
+    const visibilityButton = document.getElementById('visibilityButton');
+    const visibilityIcon = document.getElementById('visibilityIcon');
+    const searchInput = document.getElementById('searchInput');
+
+    let isVisible = false;
+
+    visibilityButton.addEventListener('click', () => {
+      isVisible = !isVisible;
+
+      if (isVisible) {
+        visibilityIcon.src = './visibility_24dp_BLACK_FILL0_wght400_GRAD0_opsz24.png';
+        visibilityIcon.alt = 'Visible';
+        searchInput.type = 'text';
+      } else {
+        visibilityIcon.src = './visibility_off_24dp_BLACK_FILL0_wght400_GRAD0_opsz24.png';
+        visibilityIcon.alt = 'Hidden';
+        searchInput.type = 'password';
+      }
+    });
+  </script>
+</body>
+</html>
